@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
-	<head>
-		<!-- 부트스트랩 CSS 및 자바스크립트 -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-
-		<!-- 반응형 웹을 위한 CSS -->
-		<link rel="stylesheet" href="landing_assets/landing.css">
-	</head>
+  <head>
+    <!-- 부트스트랩 CSS 및 자바스크립트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
-	<body>
-		<div class="landingBox">
-				<!-- 도형1: 왼쪽 위 네모+대각선 -->
-				<img class="landing_shape1" src="landing_assets/landing_shape1.svg"></img>
-				<!-- 제목 -->
-				<img class="landing_title" src="landing_assets/landing_title.png"></img>
+    <!-- 반응형 웹을 위한 CSS -->
+    <link rel="stylesheet" href="landing_assets/landing.css">
+  </head>
 
-				<!-- 도형2: 세모 -->
-				<img class="landing_shape2" src="landing_assets/landing_shape2.svg"></img>
-				<!-- 도형3: 동그라미 -->
-				<img class="landing_shape3" src="landing_assets/landing_shape3.svg"></img>
-				<!-- 도형4: 물결+대각선 -->
-				<img class="landing_shape4" src="landing_assets/landing_shape4.svg"></img>
 
-				<img class="landing_arrow" src="landing_assets/landing_arrow.png"></img>
-		</div>
-    <div id="ytplayer"></div>
-		<script src="https://www.youtube.com/iframe_api"></script>
+  <body>
+    <div id='scrollBox'>
+      <div class="landingBox">
+          <!-- 도형1: 왼쪽 위 네모+대각선 -->
+          <img class="landing_shape1" src="landing_assets/landing_shape1.svg"></img>
+          <!-- 제목 -->
+          <img class="landing_title" src="landing_assets/landing_title.png"></img>
+
+          <!-- 도형2: 세모 -->
+          <img class="landing_shape2" src="landing_assets/landing_shape2.svg"></img>
+          <!-- 도형3: 동그라미 -->
+          <img class="landing_shape3" src="landing_assets/landing_shape3.svg"></img>
+          <!-- 도형4: 물결+대각선 -->
+          <img class="landing_shape4" src="landing_assets/landing_shape4.svg"></img>
+
+          <img class="landing_arrow" src="landing_assets/landing_arrow.png"></img>
+      </div>
+      <div id="ytplayer"></div>
+    </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/player_api";
@@ -50,11 +52,11 @@
           });
         }
 
-        $('.landingBox').click(function() {
+        $('#scrollBox').click(function() {
           $(this).addClass('active');
           player.playVideo();
         });
-		</script>
-	</body>
+    </script>
+  </body>
 
 </html>

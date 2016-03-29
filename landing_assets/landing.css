@@ -10,30 +10,34 @@ body {
     overflow: hidden;
 }
 
-@media screen and (max-width:640px) {
-
-}
-@media screen and (min-width:1080px) {
-  body {
-  }
-}
-
 a:link {
     text-decoration: none;
 }
 
-.landingBox {
-	width: 100%;
-	height: 100%;
-	position: absolute;
+#scrollBox {
+  position: absolute;
+  width: 100%;
+  height: 200%;
 	top: 0;
 	transition: top 1s;
   background-color: #2E3D51;
 }
 
-.active {
+#scrollBox.active {
 	top: -100%;
 }
+
+#ytplayer {
+  position: absolute;
+  top: 50%;
+}
+
+.landingBox {
+	width: 100%;
+	height: 50%;
+	position: absolute;
+}
+
 
 .addon {
 	position: fixed;
