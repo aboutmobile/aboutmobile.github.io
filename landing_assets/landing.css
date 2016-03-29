@@ -19,12 +19,13 @@ a:link {
   width: 100%;
   height: 200%;
 	top: 0;
-	transition: top 1s;
+	transition: transform 1s, -webkit-transform 1s;
   background-color: #2E3D51;
 }
 
 #scrollBox.active {
-	top: -100%;
+  transform: translate3d(0,-50%,0);
+  -webkit-transform: translate3d(0,-50%,0);
 }
 
 #ytplayer {
