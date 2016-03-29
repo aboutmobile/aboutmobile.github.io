@@ -48,8 +48,18 @@
           player = new YT.Player('ytplayer', {
             height: $(window).innerHeight(),
             width: $(window).innerWidth(),
-            videoId: 'jNGi9Z2L0cc'
+            videoId: 'jNGi9Z2L0cc',
+            events: {
+              'onStateChange': onPlayerStateChange
+            }
           });
+        }
+
+        // Redirect to next section when video ends
+        function onPlayerStateChange(event) {
+          if (event.data == YT.PlayerState.ENDED) {
+            window.location.href = "http://www.google.com";
+          }
         }
 
         $('#scrollBox').click(function() {
