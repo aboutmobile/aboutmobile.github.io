@@ -60,14 +60,14 @@ $(document).ready(function() {
         width: $(window).innerWidth(),
         videoId: 'jNGi9Z2L0cc',
         events: {
-          'onReady': onPlayerReady,
+          // 'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
         }
       });
 
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
+      // function onPlayerReady(event) {
+      //   event.target.playVideo();
+      // }
 
       // Redirect to next section when video ends
       function onPlayerStateChange(event) {
