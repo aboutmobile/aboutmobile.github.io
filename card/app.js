@@ -1,44 +1,79 @@
-// global index value
-var index = 0;
-var numCards = 15;
-$(document).ready(function() {
-  // insert image to DOM
-  for (var i = 0; i < numCards; i++) {
-    var imgString = '<div class="card"><img class="card-img" src="'
-    var imgSrc = 'pics/' + (i+1) + '.png'
-    $("#wrapper").append(imgString + imgSrc + '" /></div>')
+// Insert youtube iframe API
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// Replace the 'ytplayer' element with an <iframe> and
+// YouTube player after the API code downloads.
+var player;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.ENDED) {
+    window.location.href = "http://www.google.com";
   }
+}
 
-  // get window width
+var index = 0;
+var numCards = 5;
+$(document).ready(function() {
   var cardWidth = $('#cards').width();
-  $('.card').width(cardWidth);
-  $('#wrapper').width(cardWidth * numCards);
 
-  $('#cards').height(cardWidth);
+  function changeBullet(idx) {
+    for (var i = 0; i < 5; i++) {
+      $('#bullets .bullet:nth-child(' + (i+1) + ')').removeClass('active');
+    }
+    $('#bullets .bullet:nth-child(' + (idx+1) + ')').addClass('active');
+  }
 
   function flipForward() {
     if (index + 1 >= numCards)
       return;
     index++;
-    $('#wrapper').css('left', -cardWidth*index + 'px');
+    $('#cards_wrapper').css('transform', 'translateX(-' + ((index)*20) + '%)');
+    changeBullet(index);
   }
 
   function flipBackward() {
     if (index == 0)
       return;
     index--;
-    $('#wrapper').css('left', -cardWidth*index + 'px');
+    $('#cards_wrapper').css('transform', 'translateX(-' + ((index)*20) + '%)');
+    changeBullet(index);
   }
-
-  $('#cards').click(function() {
-    flipForward();
-  })
 
   var cardsHammer = new Hammer(document.getElementById('cards'));
   cardsHammer.on('swipeleft', function() {
+    console.log('swipeleft')
     flipForward();
-  })
+  });
   cardsHammer.on('swiperight', function() {
+    console.log('swiperight')
     flipBackward();
+  });
+
+  //click
+  $("#cards").click(function() {
+    if (index == 4) {
+      player = new YT.Player('ytplayer', {
+        height: $(window).innerHeight(),
+        width: $(window).innerWidth(),
+        videoId: 'jNGi9Z2L0cc',
+        events: {
+          // 'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+
+      // function onPlayerReady(event) {
+      //   event.target.playVideo();
+      // }
+
+      // Redirect to next section when video ends
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+          window.location.href = "http://aboutmobile.github.io/chat/index.html";
+        }
+      }
+    }
   })
 })
