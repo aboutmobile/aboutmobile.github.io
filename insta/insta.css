@@ -4,6 +4,9 @@ body {
     font-family: sans-serif;
 }
 
+.overflowHidden {
+    overflow: hidden;
+}
 ul {
     list-style-type: none;
     padding-left: 3px;

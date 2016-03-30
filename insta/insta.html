@@ -14,7 +14,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="overflowHidden">
 	<!-- 도입부 워딩 -->
 	<div class="subBox">
 			<!-- 위에 그림 -->
@@ -728,6 +728,7 @@
 <script>
 	$('.subBox').click(function() {
 		$(this).addClass('active');
+		$('body').removeClass('overflowHidden')
 	})
 </script>
 
