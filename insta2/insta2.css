@@ -40,3 +40,14 @@ body {
     background: -o-linear-gradient(#ffffff, #2D3D52);
     background: linear-gradient(#ffffff, #2D3D52);	
 }
+
+.introWord {
+    text-align: center;
+    font-size: 1.6em;
+    background: #2D3D52;
+    color: #ffffff;
+}
+
+.hashTag {
+    color: #BDD1DC;
+}
