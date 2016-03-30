@@ -7,7 +7,7 @@ $(document).ready(function() {
     $("#progress").toggleClass("alert");
     setTimeout(function() {
       $("#progress").toggleClass("alert");
-    }, 500);
+    }, 350);
   }
 
   function flipForward() {
