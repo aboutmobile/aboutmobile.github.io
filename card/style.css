@@ -1,67 +1,44 @@
 body {
   margin: 0;
-  background-color: #2E3D51;
 }
 
-#ytplayer {
-    position: absolute;
-    z-index: 2;
-}
-
-#directions {
-  position: absolute;
-  top: 0;
+#cover-wrapper {
   width: 100%;
-  height: 100%;
-}
-
-#bullets {
-  position: absolute;
-  top: 100%;
-  margin-top: 10px;
-  margin-right: -50%;
-  transform: translateX(-50%);
-  left: 50%;
-}
-
-#bullets .bullet {
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: rgba(255,255,255,0.2);
-  float: left;
-  margin: 0 10px;
-}
-
-#bullets .bullet.active {
-  background-color: #d9d6c4;
-}
-
-#cards {
   position: relative;
-  top:50%;
+}
+
+#cover {
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
-  width:100%;
-}
-
-#draggable {
   width: 100%;
-  overflow: hidden;
 }
 
-#cards_wrapper {
+body img {
+  width: 100%;
+}
+
+#row .col {
+  width: 50%;
+}
+
+.col1 {
   position: relative;
-  width: 500%;
-  display: inline-block;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  transform: translateX(0);
 }
 
-.card {
-  width: 20%;
-  float: left;
+.col1 img {
+  position: absolute;
 }
 
-.card img {
-  width: 100%;
+.fake {
+  z-index: -1;
+}
+
+.fake.active {
+  z-index: 1;
+}
+
+.col2 {
+  position: relative;
+  left: 50%;
 }
