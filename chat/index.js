@@ -26,7 +26,7 @@ function toDOM(diction) {
 		dom.append($('<div class="quit-bubble">' + diction.msg + '</div>'))
 	}
 	else if (diction.type == 'LAST') {
-		dom.append($('<div class="message-right">' + '<div class="bubble-right">' + '<a href="#">' + diction.msg + '</a>' + '</div>' + '</div>'))				
+		dom.append($('<div class="message-right">' + '<div class="bubble-right">' + '<a href="http://aboutmobile.github.io/insta/insta.html">' + diction.msg + '</a>' + '</div>' + '</div>'))				
 	}
 	return dom;
 }
