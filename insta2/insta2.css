@@ -18,11 +18,16 @@ body {
 }
 
 .albumWrapper {
-	
+	margin-top: 5%;
 }
 
 .albumTitle {
 	font-size: 0.3em;
 	color: #777777;
-	margin-top: 5%;
+	margin-bottom: 2%;
+}
+
+.albumImage {
+	width: 100%;
+	
 }
