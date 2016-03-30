@@ -11,10 +11,18 @@ body {
 	color: #ffffff;
 	font-size: 1.3em;
 	text-align: center;
-	position: fixed;
-	top: 0px;
 }
 
 .top_mar {
 	display:none;
+}
+
+.albumWrapper {
+	
+}
+
+.albumTitle {
+	font-size: 0.3em;
+	color: #777777;
+	margin-top: 5%;
 }

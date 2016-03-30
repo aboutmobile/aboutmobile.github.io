@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>자기표현</title>
+	<title>#해시태그</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
@@ -16,20 +16,25 @@
 <body>
 	<div class="insta2Header">#해시태그</div>
 	<div class="top_mar"></div>
-
+	<div class="albumWrapper">	
+		<div class="albumTitle">제목테스트</div>
+		<div class="albumImage">
+			
+		</div>
+	</div>
 </body>
 
 </html>
 
 <script type="text/javascript">
-$(function(){ 
-    var menupos = $(".insta2Header").offset().top; 
-    $(window).scroll(function(){ 
-       if($(window).scrollTop() >= menupos) { 
-          $(".insta2Header").css("position","fixed"); 
-          $(".insta2Header").css("top","0");
-          $('.top_mar').show();
-          } 
-    }); 
- }); 
- </script>
+	$(function(){ 
+	    var menupos = $(".insta2Header").offset().top; 
+	    $(window).scroll(function(){ 
+	       if($(window).scrollTop() >= menupos) { 
+	          $(".insta2Header").css("position","fixed"); 
+	          $(".insta2Header").css("top","0");
+	          $('.top_mar').show();
+	          } 
+	    }); 
+	 });
+</script>
