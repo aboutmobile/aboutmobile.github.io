@@ -47,8 +47,10 @@ $('#send').click(function() {
 
 //푸시UI
 var pushStartTimer, pushEndTimer;
-pushStartTimer = setTimeout("pushIn()", 2000); //일정 시간이 지나면 푸시UI를 작동시킬 타이머
-pushEndTimer = setTimeout("pushOut()", 5000);
+pushStartTimer = setTimeout("pushIn()", 5000); //일정 시간이 지나면 푸시UI를 작동시킬 타이머
+// pushEndTimer = setTimeout("pushOut()", 13000);
+
+$('.push-box').click(pushOut);
 
 function pushIn() { //푸시UI를 가지고 오는 메소드
 	$('.push-box').addClass('in');
@@ -60,3 +62,5 @@ function pushOut() { //푸시UI를 버리는 메소드
 	$('.subBox').addClass('active')
 	$('.bottom').addClass('absolute')
 }
+
+
