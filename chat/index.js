@@ -32,6 +32,7 @@ function toDOM(diction) {
 	}
 	else if (diction.type == 'QUIT') {
 		dom.append($('<div class="quit-bubble">' + diction.msg + '</div>'))
+		$('.number').html("7")
 	}
 	else if (diction.type == 'LAST') {
 		dom.append($('<div class="message-right">' + '<div class="bubble-right">' + '<a href="http://aboutmobile.github.io/insta/insta.html">' + diction.msg + '</a>' + '</div>' + '</div>'))				
@@ -70,5 +71,3 @@ function pushOut() { //푸시UI를 버리는 메소드
 	$('.subBox').addClass('active')
 	$('.bottom').addClass('absolute')
 }
-
-
