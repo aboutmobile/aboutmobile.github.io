@@ -5,9 +5,10 @@ body {
 }
 
 #topbar {
+  position: relative;
   width: 100%;
   color: white;
-  position: fixed;
+  height: 20px;
   top: 0;
   border-bottom: 1px solid #222628;
   text-align: center;
@@ -16,13 +17,24 @@ body {
 }
 
 #topbar #back-button {
-  position: fixed;
+  position: absolute;
   left: 10px;
+  z-index: 10;
 }
 
 a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #FFF; /* Fix to make div clickable in IE */
+  opacity: 0; /* Fix to make div clickable in IE */
+  filter: alpha(opacity=1); /* Fix to make div clickable in IE */
   color: inherit;
   text-decoration: none;
+  display: inline-block;
 }
 
 #topbar #progress {

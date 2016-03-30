@@ -28,4 +28,9 @@ $(document).ready(function() {
     console.log('swiperight')
     flipBackward();
   });
+
+  $("#back-button").click(function() {
+    console.log('clk');
+    window.location.href = "../index.html";
+  })
 })
