@@ -40,7 +40,7 @@ window.onload = function() {
       setAnim('running');
       setTimeout(function() {
         setAnim('paused');
-        animating = false;
+        // animating = false;
       }, step);
     }, false);
 
