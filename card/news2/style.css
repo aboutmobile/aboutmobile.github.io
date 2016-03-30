@@ -1,0 +1,85 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #2E3D51;
+}
+
+#topbar {
+  position: relative;
+  width: 100%;
+  color: white;
+  height: 20px;
+  top: 0;
+  border-bottom: 1px solid #222628;
+  text-align: center;
+  padding: 13px 0;
+}
+
+#topbar #back-button {
+  position: absolute;
+  left: 10px;
+  z-index: 10;
+}
+
+a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #FFF; /* Fix to make div clickable in IE */
+  opacity: 0; /* Fix to make div clickable in IE */
+  filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#topbar #progress {
+  margin: 0 auto;
+}
+
+#directions {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#cards {
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  width:100%;
+}
+
+#draggable {
+  width: 100%;
+  overflow: hidden;
+}
+
+#cards_wrapper {
+  position: relative;
+  width: 1100%;
+  display: inline-block;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  transform: translateX(0);
+}
+
+.card {
+  width: 9.09%;
+  float: left;
+}
+
+.card img {
+  width: 100%;
+}
+
+#progress {
+  transition: font-size 0.3s;
+}
+
+#progress.alert {
+  font-size: 20px;
+}
