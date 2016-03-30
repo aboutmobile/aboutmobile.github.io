@@ -17,13 +17,12 @@ var index = 0;
 var numCards = 5;
 $(document).ready(function() {
   var cardWidth = $('#cards').width();
-  $('#bullets .bullet:nth-child(' + (index+1) + ')').css('background-color', 'blue');
 
   function changeBullet(idx) {
     for (var i = 0; i < 5; i++) {
-      $('#bullets .bullet:nth-child(' + (i+1) + ')').css('background-color', 'red');
+      $('#bullets .bullet:nth-child(' + (i+1) + ')').removeClass('active');
     }
-    $('#bullets .bullet:nth-child(' + (idx+1) + ')').css('background-color', 'blue');
+    $('#bullets .bullet:nth-child(' + (idx+1) + ')').addClass('active');
   }
 
   function flipForward() {
@@ -60,14 +59,14 @@ $(document).ready(function() {
         width: $(window).innerWidth(),
         videoId: 'jNGi9Z2L0cc',
         events: {
-          'onReady': onPlayerReady,
+          // 'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
         }
       });
 
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
+      // function onPlayerReady(event) {
+      //   event.target.playVideo();
+      // }
 
       // Redirect to next section when video ends
       function onPlayerStateChange(event) {
