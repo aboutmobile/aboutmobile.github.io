@@ -2,8 +2,10 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var cors = require('cors');
 
 app.use(express.static('public'));
+app.use(cors());
 
 var counter = 0;
 app.get('/count', function(req, res) {
