@@ -17,13 +17,12 @@ var index = 0;
 var numCards = 5;
 $(document).ready(function() {
   var cardWidth = $('#cards').width();
-  $('#bullets .bullet:nth-child(' + (index+1) + ')').css('background-color', 'blue');
 
   function changeBullet(idx) {
     for (var i = 0; i < 5; i++) {
-      $('#bullets .bullet:nth-child(' + (i+1) + ')').css('background-color', 'red');
+      $('#bullets .bullet:nth-child(' + (i+1) + ')').removeClass('active');
     }
-    $('#bullets .bullet:nth-child(' + (idx+1) + ')').css('background-color', 'blue');
+    $('#bullets .bullet:nth-child(' + (idx+1) + ')').addClass('active');
   }
 
   function flipForward() {
