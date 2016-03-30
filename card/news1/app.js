@@ -3,17 +3,28 @@ var numCards = 7;
 $(document).ready(function() {
   var cardWidth = $('#cards').width();
 
+  function alertEdge() {
+    $("#progress").toggleClass("alert");
+    setTimeout(function() {
+      $("#progress").toggleClass("alert");
+    }, 500);
+  }
+
   function flipForward() {
-    if (index + 1 >= numCards)
+    if (index + 1 >= numCards) {
+      alertEdge();
       return;
+    }
     index++;
     $('#cards_wrapper').css('transform', 'translateX(-' + ((index)*14.285) + '%)');
     $('#current_index').text(index + 1);
   }
 
   function flipBackward() {
-    if (index == 0)
+    if (index == 0) {
+      alertEdge();
       return;
+    }
     index--;
     $('#cards_wrapper').css('transform', 'translateX(-' + ((index)*14.285) + '%)');
     $('#current_index').text(index + 1);
