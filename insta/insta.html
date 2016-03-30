@@ -14,7 +14,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
-<body class="overflowHidden">
+<body>
 	<!-- 도입부 워딩 -->
 	<div class="subBox">
 			<!-- 위에 그림 -->
@@ -26,6 +26,27 @@
 			<img class="landing_arrow" src="landing_arrow.png"></img>
 	</div>
 	<div class="introWord">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>	
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>	
+		<br>
+		<p>내려가세요...!</p>
+		<br>
+		<br>
+		<br>
+		<br>	
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>	
 		<br>
 		<br>
 		<br>
@@ -785,9 +806,11 @@
 	}
 </script>
 <script>
+	$('body').bind('touchmove', function(e){e.	preventDefault()})
+
 	$('.subBox').click(function() {
 		$(this).addClass('active');
-		$('body').removeClass('overflowHidden');
+	$('body').unbind('touchmove')
 	})
 </script>
 
