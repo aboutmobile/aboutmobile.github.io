@@ -24,7 +24,7 @@ body {
 	width: 100%;
 	background-color: rgba(10, 10, 10, 0.95);
 	transition: top 1s ease;
-	height: 8%;
+	height: 12%;
 	color: #eeeeee;
 	position: absolute;
 	top: -9%;
@@ -48,7 +48,7 @@ body {
 
 .profile {
 	float:left;
-	width:10%;
+	width:8%;
 }
 
 .kakaoTalk {
