@@ -1,5 +1,8 @@
 $(".col1").click(function() {
   $(".fake").toggleClass("active");
+  setTimeout(function() {
+    $(".fake").toggleClass("active");
+  }, 1000);
 })
 
 $(document).ready(function() {
