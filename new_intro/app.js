@@ -1,4 +1,4 @@
-// Insert youtube iframe
+// Insert youtube iframe API
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -7,18 +7,6 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // Replace the 'ytplayer' element with an <iframe> and
 // YouTube player after the API code downloads.
 var player;
-function onYouTubePlayerAPIReady() {
-  player = new YT.Player('ytplayer', {
-    height: $(window).innerHeight(),
-    width: $(window).innerWidth(),
-    videoId: 'jNGi9Z2L0cc',
-    events: {
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
-
-// Redirect to next section when video ends
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.ENDED) {
     window.location.href = "http://www.google.com";
@@ -67,7 +55,26 @@ $(document).ready(function() {
   //click
   $("#cards").click(function() {
     if (index == 4) {
-      playVideo();
+      player = new YT.Player('ytplayer', {
+        height: $(window).innerHeight(),
+        width: $(window).innerWidth(),
+        videoId: 'jNGi9Z2L0cc',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // Redirect to next section when video ends
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+          window.location.href = "http://www.google.com";
+        }
+      }
     }
   })
 })

@@ -3,9 +3,8 @@ body {
   background-color: #222628;
 }
 
-#video {
+#ytplayer {
     position: absolute;
-    top: 0;
     z-index: 2;
 }
 
