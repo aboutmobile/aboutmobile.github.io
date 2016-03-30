@@ -6,6 +6,8 @@ body {
 #cards {
   position: relative;
   overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #wrapper {
