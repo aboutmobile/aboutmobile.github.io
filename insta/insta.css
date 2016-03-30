@@ -206,10 +206,11 @@ hr {
     position: absolute;
     top: 0;
     transition: top 1s;
+    background-color: #2D3D52;
 }
 .subBoxBackground {
     height: 100%;
-    background-color: #2D3D52;
+
 }
 
 .active {
