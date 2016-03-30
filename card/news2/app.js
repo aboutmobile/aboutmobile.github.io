@@ -1,5 +1,5 @@
 var index = 0;
-var numCards = 7;
+var numCards = 11;
 $(document).ready(function() {
   var cardWidth = $('#cards').width();
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
       return;
     }
     index++;
-    $('#cards_wrapper').css('transform', 'translateX(-' + ((index)*14.285) + '%)');
+    $('#cards_wrapper').css('transform', 'translateX(-' + ((index)*9.09) + '%)');
     $('#current_index').text(index + 1);
   }
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
       return;
     }
     index--;
-    $('#cards_wrapper').css('transform', 'translateX(-' + ((index)*14.285) + '%)');
+    $('#cards_wrapper').css('transform', 'translateX(-' + ((index)*9.09) + '%)');
     $('#current_index').text(index + 1);
   }
 
