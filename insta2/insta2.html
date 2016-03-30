@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>자기표현</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+	<!-- 부트스트랩 CSS 불러오기(왜인지는 모르겠으나 부트스트랩을 안써도 화면이 더 이뻐진다..?!) -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- 반응형 웹을 위한 CSS -->
+	<link rel="stylesheet" href="insta2.css">
+</head>
+
+<body>
+	<div class="insta2Header">#해시태그</div>
+	<div class="top_mar"></div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+$(function(){ 
+    var menupos = $(".insta2Header").offset().top; 
+    $(window).scroll(function(){ 
+       if($(window).scrollTop() >= menupos) { 
+          $(".insta2Header").css("position","fixed"); 
+          $(".insta2Header").css("top","0");
+          $('.top_mar').show();
+          } 
+    }); 
+ }); 
+ </script>
