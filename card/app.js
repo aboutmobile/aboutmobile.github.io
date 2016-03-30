@@ -9,4 +9,7 @@ $(document).ready(function() {
   var windowWidth = $(window).innerWidth();
   var windowHeight = $(window).innerHeight();
   $("#cover-wrapper").height(windowHeight - windowWidth / 2);
+  $('.subBox').click(function() {
+    $(this).addClass('active');
+  })
 })
