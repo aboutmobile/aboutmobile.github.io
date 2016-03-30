@@ -34,3 +34,9 @@ body {
 	width: 100%;
 	
 }
+
+.endingGradiation {
+    background: -webkit-linear-gradient(#ffffff, #2D3D52);
+    background: -o-linear-gradient(#ffffff, #2D3D52);
+    background: linear-gradient(#ffffff, #2D3D52);	
+}
