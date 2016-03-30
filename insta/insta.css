@@ -28,7 +28,7 @@ hr {
 
 .introWord {
     text-align: center;
-    font-size: 25px;
+    font-size: 1.6em;
     background: #2D3D52;
     color: #ffffff;
 }
@@ -215,4 +215,14 @@ hr {
 
 .active {
     top: -100%;
+}
+
+.square {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    letter-spacing: 3px;
+}
+
+.hashTag {
+    color: #BDD1DC;
 }
