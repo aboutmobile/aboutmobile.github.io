@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+    background: #2D3D52;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 3px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+hr {
+    align: "center";
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.introWord {
+    text-align: center;
+    font-size: 25px;
+    background: #2D3D52;
+    color: #ffffff;
+}
+
+.introGradiation {
+    background: -webkit-linear-gradient(#2D3D52, #ffffff);
+    background: -o-linear-gradient(#2D3D52, #ffffff);
+    background: linear-gradient(#2D3D52, #ffffff);
+}
+
+.endingGradiation {
+    background: -webkit-linear-gradient(#ffffff, #2D3D52);
+    background: -o-linear-gradient(#ffffff, #2D3D52);
+    background: linear-gradient(#ffffff, #2D3D52);
+}
+
+.instagramBackground {
+    background: #ffffff;
+}
+
+.instagramHeader {
+    background: #ffffff;
+    border-bottom: solid 1px #bbbbbb;
+    padding: 1%;
+    position: relative;
+    z-index: 1;
+    height: 50px;
+}
+
+.instagramHeader.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.instagramHeader.fixed.absolute {
+    position: absolute;
+}
+
+@media screen and (max-width:450px) {
+
+}
+@media screen and (min-width:1080px) {
+  body {
+  }
+}
+
+.instagramProfileImage {
+    width: 30px;
+    padding-top: 3px;
+    margin-left: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.instagramHeaderProfileImage {
+    margin-top:3px;
+    float: left;
+    width: 30px;
+}
+
+.instagramHeaderInfo {
+    float: left;
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.instagramHeaderInfoID{
+    color: #00487D;
+    font-weight: bold;
+
+}
+.instagramHeaderInfoPlace {
+    font-size: 12px;
+    color: #3F90DF;
+}
+
+/* 옵션버튼 만들기 */
+.instagramHeaderOption {
+    float: right;    
+    width: 10%;
+    
+}
+
+/*width가 극도로 줄어들면 시간이 생략되도록*/
+.instagramTime {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #A5A7AA;
+    white-space: nowrap;
+    font-size: 9px;
+    padding-left: 12px;
+}
+
+
+/*화면에 꽉 차는 그림*/
+.instagramMainPhoto {
+    margin-top: -10px;
+}
+
+.instagramComment {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-break:break-all;
+}
+
+/*ID속성 지정*/
+.instagramCommentID {
+    color: #0B558A;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.instagramCommentIcon {
+    float: left;
+    width: 10%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left; 
+}
+
+.instagramCommentSpace {
+    float: left;
+    width: 70%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #A5A7AA;
+}
+
+.instagramTag {
+    color: #145B8E;
+}
+
+.row {
+    margin-left: -10px;
+    margin-right: -10px;    
+}
+
+.subTopImage{
+    position: absolute;
+    top: -5%;
+    width: 100%;
+}
+
+.subText {
+    position: absolute;
+    width: 70%;
+    margin-left: -35%;
+    left: 50%;
+    bottom: 18%;
+}
+
+.landing_arrow {
+    position: absolute;
+    left: 50%;
+    width: 130px;
+    margin-left: -65px;
+    bottom: 5%;
+}
+
+.subBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: top 1s;
+}
+.subBoxBackground {
+    height: 100%;
+    background-color: #2D3D52;
+}
+
+.active {
+    top: -100%;
+}

@@ -72,7 +72,7 @@ $(document).ready(function() {
       // Redirect to next section when video ends
       function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.ENDED) {
-          window.location.href = "http://www.google.com";
+          window.location.href = "http://aboutmobile.github.io/chat/index.html";
         }
       }
     }

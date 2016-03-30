@@ -1,0 +1,271 @@
+html { height:100%; overflow:hidden; }
+
+body {
+	margin: 0;
+	background-color: #DDF3FF;
+	height:100%;
+	overflow:hidden;
+}
+
+.subBox {
+	width: calc(100%);
+	height: calc(100%);
+	background-color: #2E3C50;
+	position: absolute;
+	top: 0;
+	transition: top 1s ease;
+}
+
+.active{
+	top: -100%;
+}
+
+.push-box {
+	width: 100%;
+	background-color: rgba(10, 10, 10, 0.95);
+	transition: top 1s ease;
+	height: 8%;
+	color: #eeeeee;
+	position: absolute;
+	top: -9%;
+}
+.push-box-profile {
+	width: 100%;
+	margin-top: 25%;
+	margin-left: 10%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;	
+}
+
+.in {
+	top: 0;
+}
+
+.out {
+	top: -9%;
+}
+
+.profile {
+	float:left;
+	width:10%;
+}
+
+.kakaoTalk {
+	font-weight: bold;
+	margin-top: 3%;
+	background-color: rgba(255, 255, 255, 0);
+	font-size: 0.8em;
+}
+
+.content {
+	margin: 0px;
+	font-size: 0.7em;
+	color: #dddddd;
+}
+.message {
+	float:left;
+	width: 80%;
+	padding-top: 1%;
+	padding-left: 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	color: #bbbbbb;    
+}
+
+.row {
+	display: inline-block;
+	width: 100%;
+}
+
+.bubble-left {
+	display: inline-block;
+	position: relative;
+	font-size: 0.9em;
+	max-width: 200px;
+	background-color: #FFE11D;
+	margin: 5px 10px;
+	padding: 5px;
+	border-radius : 5px;
+    word-break:break-all;
+}
+
+.bubble-right {
+	display: inline-block;
+	position: relative;
+	font-size: 0.9em;
+	max-width: 200px;
+	background-color: #ffffff;
+	margin: 5px 10px;
+	padding: 5px;
+	border-radius : 5px;
+    word-break:break-all;
+}
+
+.bubble-left:before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 2.5px;
+	left: -16px;
+	border: 8px solid;
+	border-color: transparent #FFE11D transparent transparent;
+}
+
+.bubble-right:before {
+	content: '';
+	position: absolute;
+	width:0;
+	height: 0;
+	top: 2.5px;
+	right: -16px;
+	border: 8px solid;
+	border-color: transparent transparent transparent #ffffff;
+}
+
+.message-left {
+	float: left;
+	max-width: 88%;
+}
+
+.message-right {
+	float: right;
+	max-width: 88%;
+}
+
+.profile-left {
+	float: left;
+	width: 12%;
+}
+
+.profile-right {
+	float: right;
+	width: 12%;
+}
+
+.kakao-profile-left {
+	float: left;
+	width: 100%;
+}
+
+.kakao-id-left {
+	float:left;
+	font-size: 0.5em;
+	width: 100%;
+}
+
+.kakao-profile-right {
+	float: right;
+	width: 100%;
+}
+
+.kakao-id-right {
+	float:right;
+	font-size: 0.5em;
+	width: 100%;
+	text-align: right;
+}
+
+
+.quit-bubble {
+	height: 5%;
+	position: relative;
+	font-size : 0.5em;
+	text-align: center;
+	color: #555555;
+	background-color: rgba(200, 200, 200, 0.3);
+	padding: 0px;
+	margin-top: 10px;
+	padding-top: 2%;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.messages-wrapper {
+	max-height: calc(83%);
+	overflow: scroll;	
+}
+.messages {
+	min-height: calc(45%);
+}
+
+#container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+#top {
+	background-color: rgba(220, 243, 255, 0.8);
+	height: 7.5%;
+	color: #444444;
+	border-bottom: 1px solid #cccccc;
+	text-align: center;
+	line-height: 50px;
+	font-size: 1.1em;
+}
+
+.number {
+	color: #888888;
+}
+
+.bottom {
+	bottom: 0px;
+	background-color: #F7F7F7;
+	width: 100%;
+	height: 9%;
+}
+
+.absolute {
+	position: absolute;
+}
+
+#msg-box {
+	width: 80%;
+	height: 50px;
+	margin: 5px;
+	float: left;
+}
+
+#send {
+	float: right;
+	background-color: #ffffff;
+	border: 1px solid #efefef;
+	top: 20;
+	height: 50px;
+	margin: 5px;
+	width: 14%;
+	outline: 0;
+}
+
+#send:active {
+	background-color: #dddddd;
+}
+
+
+.time-bubble {
+	width: 98%;
+	border-radius: 0.6em;
+	background-color: rgba(187, 187, 187, 0.50);
+	font-size: 0.7em;
+	text-align: center;
+	color: #777777;
+	margin: 5px auto 5px auto;
+}
+
+.subTopImage {
+    position: absolute;
+    top: -5%;
+    width: 100%;
+}
+.subText {
+    position: absolute;
+    width: 70%;
+    margin-left: -35%;
+    left: 50%;
+    bottom: 18%;
+}
