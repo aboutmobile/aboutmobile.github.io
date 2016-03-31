@@ -11,24 +11,25 @@
 
 	<!-- 반응형 웹을 위한 CSS -->
 	<link rel="stylesheet" href="insta2.css">
+  <link rel="stylesheet" href="../heart/heart.css">
 </head>
 
 <body>
 	<div class="insta2Header">#해시태그</div>
 	<div class="top_mar"></div>
-	<div class="albumWrapper">	
+	<div class="albumWrapper">
 		<div class="albumTitle">#해시태그의 기능</div>
 		<div class="albumImage">
 			<img class="albumImage" src="pic/1.png"/>
 		</div>
 	</div>
-	<div class="albumWrapper">	
+	<div class="albumWrapper">
 		<div class="albumTitle">#해시태그의 편리함</div>
 		<div class="albumImage">
 			<img class="albumImage" src="pic/2.png"/>
 		</div>
-	</div>	
-	<div class="albumWrapper">	
+	</div>
+	<div class="albumWrapper">
 		<div class="albumTitle">#해시태그와 개인화</div>
 		<div class="albumImage">
 			<img class="albumImage" src="pic/3.png"/>
@@ -104,20 +105,22 @@
 		<br>
 		<br>
 		<br>
-	</div>	
+	</div>
+  <div class="heart" data-source="insta2"></div>
+  <script src="../heart/heart.js"></script>
 </body>
 
 </html>
 
 <script type="text/javascript">
-	$(function(){ 
-	    var menupos = $(".insta2Header").offset().top; 
-	    $(window).scroll(function(){ 
-	       if($(window).scrollTop() >= menupos) { 
-	          $(".insta2Header").css("position","fixed"); 
+	$(function(){
+	    var menupos = $(".insta2Header").offset().top;
+	    $(window).scroll(function(){
+	       if($(window).scrollTop() >= menupos) {
+	          $(".insta2Header").css("position","fixed");
 	          $(".insta2Header").css("top","0");
 	          $('.top_mar').show();
-	          } 
-	    }); 
+	          }
+	    });
 	 });
 </script>

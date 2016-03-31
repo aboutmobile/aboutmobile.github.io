@@ -13,7 +13,6 @@ body {
   border-bottom: 1px solid #222628;
   text-align: center;
   padding: 13px 0;
-  font-size: 16px;
 }
 
 #topbar #back-button {
@@ -62,14 +61,14 @@ a {
 
 #cards_wrapper {
   position: relative;
-  width: 700%;
+  width: 1100%;
   display: inline-block;
   transition: transform 0.5s, -webkit-transform 0.5s;
   transform: translateX(0);
 }
 
 .card {
-  width: 14.285%;
+  width: 9.09%;
   float: left;
 }
 
