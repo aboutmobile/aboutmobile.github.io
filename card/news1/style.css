@@ -13,6 +13,7 @@ body {
   border-bottom: 1px solid #222628;
   text-align: center;
   padding: 13px 0;
+  font-size: 16px;
 }
 
 #topbar #back-button {
