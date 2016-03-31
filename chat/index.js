@@ -1,5 +1,5 @@
 var scenario = [
-	{ id:'조장님', img: 'kakao_shik.png', type: 'RECEIVE', msg: '안녕하세요 지식정보조 여러분 오늘은 랩실에서 밤을 새려고 합니다! 발표가 망할 위기에 처해 있으니 모들 일개미처럼 일하길 바래요^^', time: '오후 3:40' },
+	{ id:'조장님', img: 'kakao_shik.png', type: 'RECEIVE', msg: '안녕하세요 지식정보조 여러분 오늘은 랩실에서 밤을 새려고 합니다! 발표가 망할 위기에 처해 있으니 모두들 일개미처럼 일하길 바래요^^', time: '오후 3:40' },
 	{ id:'교수님', img: 'kakao_teacher.png', type: 'RECEIVE', msg: '안녕하세요. 잠시 발표 관련 공지좀 하겠습니다' },
 	{ id:'교수님', img: 'kakao_teacher.png', type: 'RECEIVE', msg: '조장아' },
 	{ id:'교수님', img: 'kakao_teacher.png', type: 'RECEIVE', msg: '사람이 언제 죽는다고 생각하나?' },
@@ -25,17 +25,17 @@ function toDOM(diction) {
 	var dom = $('<div class="row">');
 	if (diction.type == 'RECEIVE') {
 		dom.append($('<div class="profile-left">' + '<img class="kakao-profile-left" src="' + diction.img + '"/>' + '</div>'))
-		dom.append($('<div class="message-left">' + '<div class="kakao-id-left">' + diction.id + '</div>' + '<div class="bubble-left">' + diction.msg + '</div>' + '</div>'))				
+		dom.append($('<div class="message-left">' + '<div class="kakao-id-left">' + diction.id + '</div>' + '<div class="bubble-left">' + diction.msg + '</div>' + '</div>'))
 	}
 	else if (diction.type == 'SEND') {
-		dom.append($('<div class="message-right">' + '<div class="bubble-right">' + diction.msg + '</div>' + '</div>'))				
+		dom.append($('<div class="message-right">' + '<div class="bubble-right">' + diction.msg + '</div>' + '</div>'))
 	}
 	else if (diction.type == 'QUIT') {
 		dom.append($('<div class="quit-bubble">' + diction.msg + '</div>'))
 		$('.number').html("7")
 	}
 	else if (diction.type == 'LAST') {
-		dom.append($('<div class="message-right">' + '<div class="bubble-right">' + '<a href="http://aboutmobile.github.io/insta/insta.html">' + diction.msg + '</a>' + '</div>' + '</div>'))				
+		dom.append($('<div class="message-right">' + '<div class="bubble-right">' + '<a href="http://aboutmobile.github.io/insta/insta.html">' + diction.msg + '</a>' + '</div>' + '</div>'))
 	}
 	return dom;
 }
