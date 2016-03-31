@@ -57,7 +57,7 @@ $(document).ready(function() {
       player = new YT.Player('ytplayer', {
         height: $(window).innerHeight(),
         width: $(window).innerWidth(),
-        videoId: 'jNGi9Z2L0cc',
+        videoId: 'YBEAlJ4afB0',
         events: {
           // 'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
