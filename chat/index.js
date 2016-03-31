@@ -70,4 +70,5 @@ function pushOut() { //푸시UI를 버리는 메소드
 	$('.push-box').addClass('out');
 	$('.subBox').addClass('active')
 	$('.bottom').addClass('absolute')
+  $(".heart").removeClass("heart-cover");
 }

@@ -15,6 +15,10 @@
   top: 100px;
 }
 
+.heart-cover {
+  position: static;
+}
+
 @-webkit-keyframes heartBlast
 {
   0% {background-position: left;}
